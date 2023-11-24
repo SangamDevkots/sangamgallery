@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="profile" class="profile">
+    <div class="profile-content">
+      <h1>Your Name</h1>
+      <p>Web Developer</p>
+    </div>
+  </div>
+
+  <div id="image-modal" class="image-modal">
+    <span class="close" id="close-modal">&times;</span>
+    <div class="modal-container">
+      <img class="modal-content" id="modal-image" />
+    </div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-wrapper">
+      <div class="tall">
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/01.jpg"
+        />
+      </div>
+      <div class="wide">
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/02.jpg"
+        />
+      </div>
+      <div>
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/03.jpg"
+        />
+      </div>
+      <div class="xl-wide">
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/04.jpg"
+        />
+      </div>
+      <div class="tall">
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/05.jpg"
+        />
+      </div>
+      <div>
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/06.jpg"
+        />
+      </div>
+      <div class="big">
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/07.jpg"
+        />
+      </div>
+      <div class="xl-big">
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/08.jpg"
+        />
+      </div>
+      <div>
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/09.jpg"
+        />
+      </div>
+      <div>
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/10.jpg"
+        />
+      </div>
+      <div class="tall">
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/11.jpg"
+        />
+      </div>
+      <div>
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/12.jpg"
+        />
+      </div>
+      <div>
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/13.jpg"
+        />
+      </div>
+      <div class="tall">
+        <img
+          src="https://cdn.ethancopping.com/codepen/Responsive%20Gallery/14.jpg"
+        />
+      </div>
+      <div class="wide">
+        <img
+          src="https://static01.nyt.com/images/2022/12/30/multimedia/30soccer-ronaldo-1-76fd/30soccer-ronaldo-1-76fd-mediumSquareAt3X.jpg"
+        />
+      </div>
+    </div>
+  </div>
+  <script src="scipy.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let modal = document.getElementById("image-modal");
+      let modalImg = document.getElementById("modal-image");
+      let closeModal = document.getElementById("close-modal");
+
+      document.querySelectorAll(".gallery-wrapper > div > img").forEach((img) => {
+        img.addEventListener("click", function () {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        });
+      });
+
+      closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>
